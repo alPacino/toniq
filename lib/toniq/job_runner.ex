@@ -55,7 +55,6 @@ defmodule Toniq.JobRunner do
     job_details = "##{job.id}: #{inspect(job.worker)}.perform(#{inspect(job.arguments)})"
 
     "Job #{job_details} failed with error: #{inspect(error)}\n\n#{stacktrace}"
-    |> String.trim
     |> Logger.error
   end
 end
